@@ -1,5 +1,13 @@
 <?php
 
+$run = shouldRun();
+
+if ($run == false) {
+	die("Already ran config");
+}
+
+
+
 $API_KEY = "AIzaSyDxQyIwXug-O2Ha9hVRWIL3kuSdOY7PPD4";
 $BASE_URL = "https://maps.googleapis.com/maps/api/place/textsearch/json?";
 
@@ -26,7 +34,8 @@ foreach ($rows as $place) {
 		$latLong = $newData['location'];
 		$rating = $newData['rating'];
 		$priceNum = $newData['priceNum'];
-		mysql_query("UPDATE WifiLocations SET latLong='$latLong' rating='$rating' priceNum='$priceNum' WHERE id=$id") or die(mysql_error());
+		$score = strval(5 - intval($priceNum) + intval($rating));
+		mysql_query("UPDATE WifiLocations SET latLong='$latLong' rating='$rating' priceNum='$priceNum' score='$score' WHERE id=$id") or die(mysql_error());
 		
 	}
 	else {
@@ -61,6 +70,15 @@ function getLocationData($place, $json) {
 	
 }
 
-
-
+function shouldRun() {
+	$file = "conditionsCheck.txt";
+	$unset = "UNSET\n";
+	$set = "SET";
+	
+	if (file_exists($file) && file_get_contents($file) == $unset) {
+		file_put_contents($file, $set);
+		return true;
+	}
+	return false;
+}
 
