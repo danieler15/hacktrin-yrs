@@ -1,5 +1,11 @@
 <?php
 
+$run = shouldRun();
+
+if ($run == false) {
+	die("Already ran config");
+}
+
 mysql_connect("localhost", "root", "") or die(mysql_error());
 mysql_select_db("YRS") or die(mysql_error());
 
@@ -7,7 +13,7 @@ $jsonObject = json_decode(file_get_contents("wifidata.json"), true);
 $data = $jsonObject['data'];
 
 foreach ($data as $place) {
-  $name = mysql_real_escape_string($place[9]);
+	$name = mysql_real_escape_string($place[9]);
 	if (!isValidName($name)) {
 		continue;
 	}
@@ -43,3 +49,18 @@ function isValidName($name) {
 	}
 	return true;
 }
+
+function shouldRun() {
+	$file = "conditionsCheck.txt";
+	$unset = "UNSET\n";
+	$set = "SET";
+	
+	if (file_exists($file) && file_get_contents($file) == $unset) {
+		file_put_contents($file, $set);
+		return true;
+	}
+	return false;
+}
+
+
+
