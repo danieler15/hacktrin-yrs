@@ -1,9 +1,22 @@
 <?php
+$name;
 
-$url="https://maps.googleapis.com/maps/api/place/textsearch/json?key=AIzaSyDxQyIwXug-O2Ha9hVRWIL3kuSdOY7PPD4&query=restaurants+near+10022&sensor=true";
-
+$zipcode;
+$location;
+$status;
+$url="https://maps.googleapis.com/maps/api/place/textsearch/json?key=AIzaSyDxQyIwXug-O2Ha9hVRWIL3kuSdOY7PPD4&query="+$name+"+new+york&sensor=true&types=restaurant";
     $json = file_get_contents($url);
+ //   echo $json;
     $data = json_decode($json, TRUE);
-	var_dump($data);
+    $status=$data["status"];
+    echo $status;
+    if($status="OK"){
+    	getInfo($data)
+    }
+    function getInfo($data){
+    }
+    
+//	echo $data;
+//	var_dump($data);
 ?>
 
