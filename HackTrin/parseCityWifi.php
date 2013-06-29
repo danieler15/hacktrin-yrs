@@ -51,7 +51,7 @@ function isValidName($name) {
 }
 
 function shouldRun() {
-	$file = "conditionsCheck.txt";
+	$file = "wifiConditions.txt";
 	$unset = "UNSET\n";
 	$set = "SET";
 	

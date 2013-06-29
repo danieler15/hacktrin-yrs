@@ -71,7 +71,7 @@ function getLocationData($place, $json) {
 }
 
 function shouldRun() {
-	$file = "conditionsCheck.txt";
+	$file = "foodConditions.txt";
 	$unset = "UNSET\n";
 	$set = "SET";
 	
