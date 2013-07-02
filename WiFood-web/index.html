@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	
+  	<meta charset="UTF-8"/>
+  	<title>WiFood</title>
+    <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDxQyIwXug-O2Ha9hVRWIL3kuSdOY7PPD4&sensor=true">
+    </script>
+    <script>
+    var markers = new Array();
+    	var infoWindows = new Array();
+    </script>
+    <style>
+    h1{
+    	text-align: center;
+    }
+   /* div{
+   		width:100%;
+    	height:100%;
+    	margin:0;
+    	padding:0;
+    }
+    #map{
+    	height:100%;
+   }*/
+    </style>
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+  </head>
+  <body>
+  	<style>
+  		#titleimage{ display: block; margin-left: auto; margin-right: auto; }
+  	</style>
+  	<div id="title">
+  		<img id="titleimage" src="http://s11.postimg.org/3q3erggpf/hamfi2.png" height="100px" width="100px"/>
+  	</div>
+  	<style type="text/css">
+      html { height: 100% }
+      body { height: 100%; margin: 0; padding: 0 }
+      /*#map-canvas { height: 90%;
+    }*/
+      /*#credits{ height: 50px}*/
+      /*#topPiece { height:20% }*/
+    </style>
+  	<script>
+  	//Have you ever needed wifi to complete you work?  Do you have an insatiable hunger for Wifi?
+  		var allPlaces = new Array();
+  		var multiplier = 25;
+  		function place(nm, ad, ltLn, zp, pN, rt, wb, ph, sc){
+  			this.name = nm;
+  			this.address = ad;
+  			this.latLong = ltLn;
+  			this.coords = this.latLong.split(",");
+  			this.lat = this.coords[0];
+  			this.lng = this.coords[1];
+  			this.zip = zp;
+  			this.priceNum = pN;
+  			this.rating = rt;
+  			this.website = wb;
+  			this.phone = ph;
+  			this.score = sc;
+  			this.red = 255-(this.score*25);
+  			this.green = this.score*25;
+  			this.blue = 0;
+  			this.fullInfo = "Name: "+this.name+"\n Address: "+this.address+"\n Food: "+this.rating;
+  			//alert("end Place"+this.name+" "+this.address+" "+this.latLong+" "+this.lat+" "+this.lng+" "+this.zip+" "+this.priceNum+" "+this.rating+" "+this.website+" "+this.phone+" "+this.score);
+  		};
+  	</script>
+  <!--	<?php
+  		mysql_connect("localhost", "root", "") or die(mysql_error());
+  		mysql_select_db("YRS") or die(mysql_error());
+  		
+  		$query = mysql_query("SELECT * FROM WifiLocations") or die(mysql_error());
+  		while ($row = mysql_fetch_array($query)) {
+  			$name = $row['name'];
+  			$address = $row['address'];
+  			$latLong = $row['latLong'];
+  			$zip = $row['zip'];
+  			$priceNum = $row['priceNum'];
+  			$rating = $row['rating'];
+  			$website = $row['website'];
+  			$phone = $row['phone'];
+  			$score = $row['score'];
+  			
+  			echo "<script type='text/javascript'>";
+  			echo "allPlaces.push(".$name.",".$address.",".$latLong",".$zip.",".$priceNum.",".$rating.",".$website.",".$phone.",".$score.");"
+  			
+  			echo "var place = new Object()";
+  			echo "place.name = ".$name.";";
+  			echo "place.address = ".$address.";";
+  			echo "place.latLong = ".$latLong.";";
+  			echo "place.zip = ".$zip.";";
+  			echo "place.priceNum = ".$priceNum.";";
+  			echo "place.rating = ".$rating.";";
+  			echo "place.website = ".$website.";";
+  			echo "place.phone = ".$phone.";";
+  			echo "place.score = ".$score.";";
+  			
+  			echo "</script>";
+  		}
+  		
+  		
+  	?>-->
+  	<script type="text/javascript">
+  	//window.onload = function(){
+  	//alert("Start Main Script");
+  	/*for(var g = 0; g < 10; g++){
+  		//alert("In Loop");
+  		//allPlaces.push(new place("Michael", "545 WEA", "30,145", "10024", "3", "29", "Starbucks.com", "777-777-7777", "10"));
+  		allPlaces.push(new place("Michael", "545 WEA", (g+30)+","+(g+145), "10024", (g%5), "29", "MEMEME.com", "777-777-7777", g));
+  	}*/
+  	allPlaces.push(new place("Starbucks", "111 Broadway", "40.671915,-73.970432", "10024", "3", "29", "Starbucks.com", "777-777-7777", "10"));
+  	//alert("Array Made");
+  	$(document).ready(function(){
+  		
+	function initialize() {
+    	/*var mapOptions = {
+    		center: new google.maps.LatLng(-34.397, 150.644),
+    		zoom: 7,
+    		mapTypeId: google.maps.MapTypeId.ROADMAP
+    	};
+    	var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+    */
+    	/*var pinColor = "FE7569";
+    	var pinImage = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|" + pinColor,
+    		new google.maps.Size(21, 34),
+    		new google.maps.Point(0,0),
+    		new google.maps.Point(10, 34));
+    	var pinShadow = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_shadow",
+    		new google.maps.Size(40, 37),
+    		new google.maps.Point(0, 0),
+    		new google.maps.Point(12, 35));
+    		*/
+    		// Create an array of styles.
+    var styles = [
+    	{
+    		stylers: [
+    			{ hue: "#00ffe6" },
+    			{ saturation: -20 }
+    		]
+    	},{
+    		featureType: "road",
+    		elementType: "geometry",
+    		stylers: [
+    			{ lightness: 100 },
+    			{ visibility: "simplified" }
+    		]
+    	},{
+    		featureType: "road",
+    		elementType: "labels",
+    		stylers: [
+    			{ visibility: "off" }
+    		]
+    	}
+    ];
+
+    var styledMap = new google.maps.StyledMapType(styles,
+    	{name: "Styled Map"});
+
+    var mapOptions = {
+    	zoom: 13,
+    	center: new google.maps.LatLng(40.7142, -74.0064),
+    	mapTypeControlOptions: {
+    		mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
+    	}
+    };
+    var map = new google.maps.Map(document.getElementById('map-canvas'),
+    	mapOptions);
+
+	function windowOpener(num){
+    		infoWindows[num].open(map,markers[num]);
+    	}
+    	
+    map.mapTypes.set('map_style', styledMap);
+    map.setMapTypeId('map_style');
+    	var pinColors = new Array();
+    	for(var q = 0; q < allPlaces.length; q++){
+    		pinColors.push(rgbToHex(allPlaces[q].red, allPlaces[q].green, allPlaces[q].blue));
+    	}
+    	
+    	var pinImages = new Array();
+    	var pinShadows = new Array();
+    	for(var w = 0; w < allPlaces.length; w++){
+    		pinImages.push(new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|" + pinColors[w],
+    			new google.maps.Size(21, 34),
+    			new google.maps.Point(0,0),
+    			new google.maps.Point(10, 34)));
+    		pinShadows.push(new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_shadow",
+    			new google.maps.Size(40, 37),
+    			new google.maps.Point(0, 0),
+    			new google.maps.Point(12, 35)));
+    	}
+    
+    	
+    	for(var i = 0; i < allPlaces.length; i++){
+    		markers.push(new google.maps.Marker({
+    			position: new google.maps.LatLng(allPlaces[i].lat, allPlaces[i].lng),
+    			map: map,
+    			title: allPlaces[i].name,
+    			icon: pinImages[i],
+    			shadow: pinShadows[i]
+    			}))
+    		infoWindows.push(new google.maps.InfoWindow({
+      			content: allPlaces[i].fullInfo,
+      			maxWidth: 200
+  				}))
+    		/*google.maps.event.addListener(markers[i], 'click', function() {
+    			infoWindows[i].open(map,markers[i]);
+  				});*/
+  			google.maps.event.addListener(markers[i], 'click', windowOpener(i));
+    	}
+    }
+    
+    
+   
+    	var windowHeight = $(window).height();
+    	var creditHeight = $("#credits").height();
+    	var titleHeight = $("#title").height();
+    	$("#map-canvas").height((windowHeight)-(creditHeight+titleHeight));
+    	$(window).resize(function(){
+    		windowHeight= $(window).height();
+    		$("#map-canvas").height((windowHeight)-(creditHeight+titleHeight));
+    		console.log(creditHeight+titleHeight);
+    	});
+    	google.maps.event.addDomListener(window, 'load', initialize);
+    
+    
+    
+    	});
+    	function rgbToHex(R,G,B) {return toHex(R)+toHex(G)+toHex(B)}
+    function toHex(n) {
+    	n = parseInt(n,10);
+    	if (isNaN(n)) return "00";
+    	n = Math.max(0,Math.min(n,255));
+    	return "0123456789ABCDEF".charAt((n-n%16)/16)
+    		+ "0123456789ABCDEF".charAt(n%16);
+    }
+    </script>
+    <div>
+    <div id="map-canvas"></div>
+    <img src="http://s10.postimg.org/rt8diqbhl/smallicon.png" align="right" height="50px" width="50px" style="z-index:999;"></img>
+    </div>
+    <div id="credits" style="margin:0px">
+    	<p style="margin:0px">© HackTrin 2013</p>
+    	<p style="margin:0px">Michael Chess, Virginia Cook, Daniel Earnst</p>
+    </div>
+  </body>
+</html>

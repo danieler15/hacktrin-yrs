@@ -1,0 +1,492 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		603492F1177FC3B50056CF20 /* WFWifiHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 603492F0177FC3B50056CF20 /* WFWifiHTTPClient.m */; };
+		60349306177FC4180056CF20 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 603492F4177FC4180056CF20 /* AFHTTPClient.m */; };
+		60349307177FC4180056CF20 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 603492F6177FC4180056CF20 /* AFHTTPRequestOperation.m */; };
+		60349308177FC4180056CF20 /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 603492F8177FC4180056CF20 /* AFImageRequestOperation.m */; };
+		60349309177FC4180056CF20 /* AFJSONRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 603492FA177FC4180056CF20 /* AFJSONRequestOperation.m */; };
+		6034930A177FC4180056CF20 /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 603492FC177FC4180056CF20 /* AFNetworkActivityIndicatorManager.m */; };
+		6034930B177FC4180056CF20 /* AFPropertyListRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 603492FF177FC4180056CF20 /* AFPropertyListRequestOperation.m */; };
+		6034930C177FC4180056CF20 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 60349301177FC4180056CF20 /* AFURLConnectionOperation.m */; };
+		6034930D177FC4180056CF20 /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 60349303177FC4180056CF20 /* AFXMLRequestOperation.m */; };
+		6034930E177FC4180056CF20 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 60349305177FC4180056CF20 /* UIImageView+AFNetworking.m */; };
+		60349311177FD0170056CF20 /* WFWifiLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 60349310177FD0170056CF20 /* WFWifiLocation.m */; };
+		6034931717806DE10056CF20 /* WifiLocationFavorite.m in Sources */ = {isa = PBXBuildFile; fileRef = 6034931617806DE10056CF20 /* WifiLocationFavorite.m */; };
+		60349319178073F00056CF20 /* hamfi2.png in Resources */ = {isa = PBXBuildFile; fileRef = 60349318178073F00056CF20 /* hamfi2.png */; };
+		6034931B1780A6E00056CF20 /* hamfi4.png in Resources */ = {isa = PBXBuildFile; fileRef = 6034931A1780A6E00056CF20 /* hamfi4.png */; };
+		6042427C177FAD80002DB727 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6042427B177FAD80002DB727 /* UIKit.framework */; };
+		6042427E177FAD80002DB727 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6042427D177FAD80002DB727 /* Foundation.framework */; };
+		60424280177FAD80002DB727 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6042427F177FAD80002DB727 /* CoreGraphics.framework */; };
+		60424282177FAD80002DB727 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60424281177FAD80002DB727 /* CoreData.framework */; };
+		60424288177FAD80002DB727 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 60424286177FAD80002DB727 /* InfoPlist.strings */; };
+		6042428A177FAD80002DB727 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 60424289177FAD80002DB727 /* main.m */; };
+		6042428E177FAD80002DB727 /* WFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6042428D177FAD80002DB727 /* WFAppDelegate.m */; };
+		60424290177FAD80002DB727 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 6042428F177FAD80002DB727 /* Default.png */; };
+		60424292177FAD80002DB727 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60424291177FAD80002DB727 /* Default@2x.png */; };
+		60424294177FAD80002DB727 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60424293177FAD80002DB727 /* Default-568h@2x.png */; };
+		60424297177FAD80002DB727 /* WiFood.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 60424295177FAD80002DB727 /* WiFood.xcdatamodeld */; };
+		6042429E177FAD96002DB727 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6042429D177FAD96002DB727 /* Storyboard.storyboard */; };
+		604242E6177FAE1F002DB727 /* CHANGELOG in Resources */ = {isa = PBXBuildFile; fileRef = 604242A0177FAE1F002DB727 /* CHANGELOG */; };
+		604242E7177FAE1F002DB727 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 604242A1177FAE1F002DB727 /* GoogleMaps.framework */; };
+		60424315177FAEAD002DB727 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60424314177FAEAD002DB727 /* AVFoundation.framework */; };
+		60424317177FAEBA002DB727 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60424316177FAEBA002DB727 /* CoreLocation.framework */; };
+		60424319177FAEC3002DB727 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60424318177FAEC3002DB727 /* CoreText.framework */; };
+		6042431B177FAEC8002DB727 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6042431A177FAEC8002DB727 /* GLKit.framework */; };
+		6042431D177FAED2002DB727 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6042431C177FAED2002DB727 /* ImageIO.framework */; };
+		6042431F177FAEE4002DB727 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6042431E177FAEE4002DB727 /* libc++.dylib */; };
+		60424321177FAEF6002DB727 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 60424320177FAEF6002DB727 /* libz.dylib */; };
+		60424323177FAF1B002DB727 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 60424322177FAF1B002DB727 /* libicucore.dylib */; };
+		60424325177FAF26002DB727 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60424324177FAF26002DB727 /* OpenGLES.framework */; };
+		60424327177FAF2E002DB727 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60424326177FAF2E002DB727 /* QuartzCore.framework */; };
+		60424329177FAF33002DB727 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60424328177FAF33002DB727 /* SystemConfiguration.framework */; };
+		6042432C177FB0C0002DB727 /* WFMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6042432B177FB0C0002DB727 /* WFMapViewController.m */; };
+		60424330177FB29A002DB727 /* Headers in Resources */ = {isa = PBXBuildFile; fileRef = 6042432F177FB29A002DB727 /* Headers */; };
+		60424332177FB3D1002DB727 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 60424331177FB3D1002DB727 /* GoogleMaps.bundle */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		603492EF177FC3B50056CF20 /* WFWifiHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFWifiHTTPClient.h; sourceTree = "<group>"; };
+		603492F0177FC3B50056CF20 /* WFWifiHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFWifiHTTPClient.m; sourceTree = "<group>"; };
+		603492F3177FC4180056CF20 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
+		603492F4177FC4180056CF20 /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
+		603492F5177FC4180056CF20 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
+		603492F6177FC4180056CF20 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
+		603492F7177FC4180056CF20 /* AFImageRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFImageRequestOperation.h; sourceTree = "<group>"; };
+		603492F8177FC4180056CF20 /* AFImageRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFImageRequestOperation.m; sourceTree = "<group>"; };
+		603492F9177FC4180056CF20 /* AFJSONRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFJSONRequestOperation.h; sourceTree = "<group>"; };
+		603492FA177FC4180056CF20 /* AFJSONRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFJSONRequestOperation.m; sourceTree = "<group>"; };
+		603492FB177FC4180056CF20 /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkActivityIndicatorManager.h; sourceTree = "<group>"; };
+		603492FC177FC4180056CF20 /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkActivityIndicatorManager.m; sourceTree = "<group>"; };
+		603492FD177FC4180056CF20 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		603492FE177FC4180056CF20 /* AFPropertyListRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPropertyListRequestOperation.h; sourceTree = "<group>"; };
+		603492FF177FC4180056CF20 /* AFPropertyListRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFPropertyListRequestOperation.m; sourceTree = "<group>"; };
+		60349300177FC4180056CF20 /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLConnectionOperation.h; sourceTree = "<group>"; };
+		60349301177FC4180056CF20 /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLConnectionOperation.m; sourceTree = "<group>"; };
+		60349302177FC4180056CF20 /* AFXMLRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFXMLRequestOperation.h; sourceTree = "<group>"; };
+		60349303177FC4180056CF20 /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFXMLRequestOperation.m; sourceTree = "<group>"; };
+		60349304177FC4180056CF20 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
+		60349305177FC4180056CF20 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
+		6034930F177FD0170056CF20 /* WFWifiLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFWifiLocation.h; sourceTree = "<group>"; };
+		60349310177FD0170056CF20 /* WFWifiLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFWifiLocation.m; sourceTree = "<group>"; };
+		60349312177FD9830056CF20 /* WFWifiHTTPClientDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFWifiHTTPClientDelegate.h; sourceTree = "<group>"; };
+		6034931517806DE10056CF20 /* WifiLocationFavorite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WifiLocationFavorite.h; sourceTree = "<group>"; };
+		6034931617806DE10056CF20 /* WifiLocationFavorite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WifiLocationFavorite.m; sourceTree = "<group>"; };
+		60349318178073F00056CF20 /* hamfi2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hamfi2.png; sourceTree = "<group>"; };
+		6034931A1780A6E00056CF20 /* hamfi4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hamfi4.png; sourceTree = "<group>"; };
+		60424278177FAD80002DB727 /* WiFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WiFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6042427B177FAD80002DB727 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6042427D177FAD80002DB727 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6042427F177FAD80002DB727 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		60424281177FAD80002DB727 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		60424285177FAD80002DB727 /* WiFood-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WiFood-Info.plist"; sourceTree = "<group>"; };
+		60424287177FAD80002DB727 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		60424289177FAD80002DB727 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6042428B177FAD80002DB727 /* WiFood-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WiFood-Prefix.pch"; sourceTree = "<group>"; };
+		6042428C177FAD80002DB727 /* WFAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WFAppDelegate.h; sourceTree = "<group>"; };
+		6042428D177FAD80002DB727 /* WFAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WFAppDelegate.m; sourceTree = "<group>"; };
+		6042428F177FAD80002DB727 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		60424291177FAD80002DB727 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		60424293177FAD80002DB727 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		60424296177FAD80002DB727 /* WiFood.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WiFood.xcdatamodel; sourceTree = "<group>"; };
+		6042429D177FAD96002DB727 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Storyboard.storyboard; path = ../Storyboard.storyboard; sourceTree = "<group>"; };
+		604242A0177FAE1F002DB727 /* CHANGELOG */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CHANGELOG; sourceTree = "<group>"; };
+		604242A1177FAE1F002DB727 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
+		60424314177FAEAD002DB727 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		60424316177FAEBA002DB727 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		60424318177FAEC3002DB727 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		6042431A177FAEC8002DB727 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		6042431C177FAED2002DB727 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		6042431E177FAEE4002DB727 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		60424320177FAEF6002DB727 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		60424322177FAF1B002DB727 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		60424324177FAF26002DB727 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		60424326177FAF2E002DB727 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		60424328177FAF33002DB727 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		6042432A177FB0C0002DB727 /* WFMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFMapViewController.h; sourceTree = "<group>"; };
+		6042432B177FB0C0002DB727 /* WFMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFMapViewController.m; sourceTree = "<group>"; };
+		6042432F177FB29A002DB727 /* Headers */ = {isa = PBXFileReference; lastKnownFileType = text; path = Headers; sourceTree = "<group>"; };
+		60424331177FB3D1002DB727 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = "GoogleMaps-iOS-1.3.1/GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		60424275177FAD80002DB727 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60424329177FAF33002DB727 /* SystemConfiguration.framework in Frameworks */,
+				60424327177FAF2E002DB727 /* QuartzCore.framework in Frameworks */,
+				60424325177FAF26002DB727 /* OpenGLES.framework in Frameworks */,
+				60424323177FAF1B002DB727 /* libicucore.dylib in Frameworks */,
+				60424321177FAEF6002DB727 /* libz.dylib in Frameworks */,
+				6042431F177FAEE4002DB727 /* libc++.dylib in Frameworks */,
+				6042431D177FAED2002DB727 /* ImageIO.framework in Frameworks */,
+				6042431B177FAEC8002DB727 /* GLKit.framework in Frameworks */,
+				60424319177FAEC3002DB727 /* CoreText.framework in Frameworks */,
+				60424317177FAEBA002DB727 /* CoreLocation.framework in Frameworks */,
+				60424315177FAEAD002DB727 /* AVFoundation.framework in Frameworks */,
+				6042427C177FAD80002DB727 /* UIKit.framework in Frameworks */,
+				6042427E177FAD80002DB727 /* Foundation.framework in Frameworks */,
+				60424280177FAD80002DB727 /* CoreGraphics.framework in Frameworks */,
+				60424282177FAD80002DB727 /* CoreData.framework in Frameworks */,
+				604242E7177FAE1F002DB727 /* GoogleMaps.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		603492F2177FC4180056CF20 /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				603492F3177FC4180056CF20 /* AFHTTPClient.h */,
+				603492F4177FC4180056CF20 /* AFHTTPClient.m */,
+				603492F5177FC4180056CF20 /* AFHTTPRequestOperation.h */,
+				603492F6177FC4180056CF20 /* AFHTTPRequestOperation.m */,
+				603492F7177FC4180056CF20 /* AFImageRequestOperation.h */,
+				603492F8177FC4180056CF20 /* AFImageRequestOperation.m */,
+				603492F9177FC4180056CF20 /* AFJSONRequestOperation.h */,
+				603492FA177FC4180056CF20 /* AFJSONRequestOperation.m */,
+				603492FB177FC4180056CF20 /* AFNetworkActivityIndicatorManager.h */,
+				603492FC177FC4180056CF20 /* AFNetworkActivityIndicatorManager.m */,
+				603492FD177FC4180056CF20 /* AFNetworking.h */,
+				603492FE177FC4180056CF20 /* AFPropertyListRequestOperation.h */,
+				603492FF177FC4180056CF20 /* AFPropertyListRequestOperation.m */,
+				60349300177FC4180056CF20 /* AFURLConnectionOperation.h */,
+				60349301177FC4180056CF20 /* AFURLConnectionOperation.m */,
+				60349302177FC4180056CF20 /* AFXMLRequestOperation.h */,
+				60349303177FC4180056CF20 /* AFXMLRequestOperation.m */,
+				60349304177FC4180056CF20 /* UIImageView+AFNetworking.h */,
+				60349305177FC4180056CF20 /* UIImageView+AFNetworking.m */,
+			);
+			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		6042426F177FAD80002DB727 = {
+			isa = PBXGroup;
+			children = (
+				603492F2177FC4180056CF20 /* AFNetworking */,
+				60424328177FAF33002DB727 /* SystemConfiguration.framework */,
+				60424326177FAF2E002DB727 /* QuartzCore.framework */,
+				60424324177FAF26002DB727 /* OpenGLES.framework */,
+				60424322177FAF1B002DB727 /* libicucore.dylib */,
+				60424320177FAEF6002DB727 /* libz.dylib */,
+				6042431E177FAEE4002DB727 /* libc++.dylib */,
+				6042431C177FAED2002DB727 /* ImageIO.framework */,
+				6042431A177FAEC8002DB727 /* GLKit.framework */,
+				60424318177FAEC3002DB727 /* CoreText.framework */,
+				60424316177FAEBA002DB727 /* CoreLocation.framework */,
+				60424314177FAEAD002DB727 /* AVFoundation.framework */,
+				60424283177FAD80002DB727 /* WiFood */,
+				6042427A177FAD80002DB727 /* Frameworks */,
+				60424279177FAD80002DB727 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		60424279177FAD80002DB727 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				60424278177FAD80002DB727 /* WiFood.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6042427A177FAD80002DB727 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				60424331177FB3D1002DB727 /* GoogleMaps.bundle */,
+				6042429F177FAE1F002DB727 /* GoogleMaps-iOS-1.3.1 */,
+				6042427B177FAD80002DB727 /* UIKit.framework */,
+				6042427D177FAD80002DB727 /* Foundation.framework */,
+				6042427F177FAD80002DB727 /* CoreGraphics.framework */,
+				60424281177FAD80002DB727 /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		60424283177FAD80002DB727 /* WiFood */ = {
+			isa = PBXGroup;
+			children = (
+				6042429D177FAD96002DB727 /* Storyboard.storyboard */,
+				6042428C177FAD80002DB727 /* WFAppDelegate.h */,
+				6042428D177FAD80002DB727 /* WFAppDelegate.m */,
+				6042432A177FB0C0002DB727 /* WFMapViewController.h */,
+				6042432B177FB0C0002DB727 /* WFMapViewController.m */,
+				603492EF177FC3B50056CF20 /* WFWifiHTTPClient.h */,
+				603492F0177FC3B50056CF20 /* WFWifiHTTPClient.m */,
+				60349312177FD9830056CF20 /* WFWifiHTTPClientDelegate.h */,
+				6034930F177FD0170056CF20 /* WFWifiLocation.h */,
+				60349310177FD0170056CF20 /* WFWifiLocation.m */,
+				60424295177FAD80002DB727 /* WiFood.xcdatamodeld */,
+				6034931517806DE10056CF20 /* WifiLocationFavorite.h */,
+				6034931617806DE10056CF20 /* WifiLocationFavorite.m */,
+				60424284177FAD80002DB727 /* Supporting Files */,
+			);
+			path = WiFood;
+			sourceTree = "<group>";
+		};
+		60424284177FAD80002DB727 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6034931A1780A6E00056CF20 /* hamfi4.png */,
+				60349318178073F00056CF20 /* hamfi2.png */,
+				60424285177FAD80002DB727 /* WiFood-Info.plist */,
+				60424286177FAD80002DB727 /* InfoPlist.strings */,
+				60424289177FAD80002DB727 /* main.m */,
+				6042428B177FAD80002DB727 /* WiFood-Prefix.pch */,
+				6042428F177FAD80002DB727 /* Default.png */,
+				60424291177FAD80002DB727 /* Default@2x.png */,
+				60424293177FAD80002DB727 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6042429F177FAE1F002DB727 /* GoogleMaps-iOS-1.3.1 */ = {
+			isa = PBXGroup;
+			children = (
+				604242A0177FAE1F002DB727 /* CHANGELOG */,
+				6042432F177FB29A002DB727 /* Headers */,
+				604242A1177FAE1F002DB727 /* GoogleMaps.framework */,
+			);
+			path = "GoogleMaps-iOS-1.3.1";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		60424277177FAD80002DB727 /* WiFood */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6042429A177FAD80002DB727 /* Build configuration list for PBXNativeTarget "WiFood" */;
+			buildPhases = (
+				60424274177FAD80002DB727 /* Sources */,
+				60424275177FAD80002DB727 /* Frameworks */,
+				60424276177FAD80002DB727 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WiFood;
+			productName = WiFood;
+			productReference = 60424278177FAD80002DB727 /* WiFood.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		60424270177FAD80002DB727 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = WF;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Daniel Ernst";
+			};
+			buildConfigurationList = 60424273177FAD80002DB727 /* Build configuration list for PBXProject "WiFood" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6042426F177FAD80002DB727;
+			productRefGroup = 60424279177FAD80002DB727 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				60424277177FAD80002DB727 /* WiFood */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		60424276177FAD80002DB727 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60424288177FAD80002DB727 /* InfoPlist.strings in Resources */,
+				60424290177FAD80002DB727 /* Default.png in Resources */,
+				60424292177FAD80002DB727 /* Default@2x.png in Resources */,
+				60424294177FAD80002DB727 /* Default-568h@2x.png in Resources */,
+				6042429E177FAD96002DB727 /* Storyboard.storyboard in Resources */,
+				604242E6177FAE1F002DB727 /* CHANGELOG in Resources */,
+				60424330177FB29A002DB727 /* Headers in Resources */,
+				60424332177FB3D1002DB727 /* GoogleMaps.bundle in Resources */,
+				60349319178073F00056CF20 /* hamfi2.png in Resources */,
+				6034931B1780A6E00056CF20 /* hamfi4.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		60424274177FAD80002DB727 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6042428A177FAD80002DB727 /* main.m in Sources */,
+				6042428E177FAD80002DB727 /* WFAppDelegate.m in Sources */,
+				60424297177FAD80002DB727 /* WiFood.xcdatamodeld in Sources */,
+				6042432C177FB0C0002DB727 /* WFMapViewController.m in Sources */,
+				603492F1177FC3B50056CF20 /* WFWifiHTTPClient.m in Sources */,
+				60349306177FC4180056CF20 /* AFHTTPClient.m in Sources */,
+				60349307177FC4180056CF20 /* AFHTTPRequestOperation.m in Sources */,
+				60349308177FC4180056CF20 /* AFImageRequestOperation.m in Sources */,
+				60349309177FC4180056CF20 /* AFJSONRequestOperation.m in Sources */,
+				6034930A177FC4180056CF20 /* AFNetworkActivityIndicatorManager.m in Sources */,
+				6034930B177FC4180056CF20 /* AFPropertyListRequestOperation.m in Sources */,
+				6034930C177FC4180056CF20 /* AFURLConnectionOperation.m in Sources */,
+				6034930D177FC4180056CF20 /* AFXMLRequestOperation.m in Sources */,
+				6034930E177FC4180056CF20 /* UIImageView+AFNetworking.m in Sources */,
+				60349311177FD0170056CF20 /* WFWifiLocation.m in Sources */,
+				6034931717806DE10056CF20 /* WifiLocationFavorite.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		60424286177FAD80002DB727 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				60424287177FAD80002DB727 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		60424298177FAD80002DB727 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		60424299177FAD80002DB727 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6042429B177FAD80002DB727 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/GoogleMaps-iOS-1.3.1\"",
+					"\"$(SRCROOT)/GoogleMaps-iOS-1.3.1/GoogleMapsSDKDemos\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WiFood/WiFood-Prefix.pch";
+				INFOPLIST_FILE = "WiFood/WiFood-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		6042429C177FAD80002DB727 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/GoogleMaps-iOS-1.3.1\"",
+					"\"$(SRCROOT)/GoogleMaps-iOS-1.3.1/GoogleMapsSDKDemos\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WiFood/WiFood-Prefix.pch";
+				INFOPLIST_FILE = "WiFood/WiFood-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		60424273177FAD80002DB727 /* Build configuration list for PBXProject "WiFood" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				60424298177FAD80002DB727 /* Debug */,
+				60424299177FAD80002DB727 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6042429A177FAD80002DB727 /* Build configuration list for PBXNativeTarget "WiFood" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6042429B177FAD80002DB727 /* Debug */,
+				6042429C177FAD80002DB727 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		60424295177FAD80002DB727 /* WiFood.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				60424296177FAD80002DB727 /* WiFood.xcdatamodel */,
+			);
+			currentVersion = 60424296177FAD80002DB727 /* WiFood.xcdatamodel */;
+			path = WiFood.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 60424270177FAD80002DB727 /* Project object */;
+}
