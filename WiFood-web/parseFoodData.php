@@ -7,7 +7,7 @@ if ($run == false) {
 
 
 
-$API_KEY = "AIzaSyDxQyIwXug-O2Ha9hVRWIL3kuSdOY7PPD4";
+$API_KEY = "****";
 $BASE_URL = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?";
 
 mysql_connect("localhost", "root", "") or die(mysql_error());
